@@ -10,7 +10,9 @@
       "Skill(plugin-dev:command-development)",
       "WebFetch(domain:claude.ai)",
       "Bash(find:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(bundle exec jekyll build:*)",
+      "Bash(bundle exec htmlproofer:*)"
     ]
   },
   "enabledPlugins": {

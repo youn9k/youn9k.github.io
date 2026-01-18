@@ -20,6 +20,16 @@ div[class^="language-"],
    2. CODE HEADER - DARK MODE
    ============================================================================ */
 
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .code-header {
+    background-color: #2d2d2d !important;
+    padding: 10px 14px !important;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
 html[data-mode="dark"] .code-header {
   background-color: #2d2d2d !important;
   padding: 10px 14px !important;
@@ -73,6 +83,26 @@ html[data-mode="light"] .code-header::before {
 /* ============================================================================
    4. CODE BODY - DARK MODE
    ============================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight {
+    background-color: #1e1e1e !important;
+  }
+
+  html:not([data-mode]) div[class^="language-"] {
+    background-color: #1e1e1e !important;
+  }
+
+  html:not([data-mode]) .highlight pre {
+    background-color: #1e1e1e !important;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  html:not([data-mode]) td.rouge-code {
+    background-color: #1e1e1e !important;
+  }
+}
 
 html[data-mode="dark"] .highlight {
   background-color: #1e1e1e !important;
@@ -200,7 +230,19 @@ html[data-mode="light"] .highlight pre::-webkit-scrollbar-track {
    10. SYNTAX HIGHLIGHTING - DARK MODE (Xcode inspired)
    ============================================================================ */
 
-/* Keywords */
+/* Keywords - Higher specificity with media query */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .k,
+  html:not([data-mode]) .highlight .kd,
+  html:not([data-mode]) .highlight .kn,
+  html:not([data-mode]) .highlight .kp,
+  html:not([data-mode]) .highlight .kr,
+  html:not([data-mode]) .highlight .kv {
+    color: #fc5fa3 !important;
+    font-weight: bold;
+  }
+}
+
 html[data-mode="dark"] .highlight .k,
 html[data-mode="dark"] .highlight .kd,
 html[data-mode="dark"] .highlight .kn,
@@ -212,6 +254,15 @@ html[data-mode="dark"] .highlight .kv {
 }
 
 /* Types and Classes */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .nc,
+  html:not([data-mode]) .highlight .kt,
+  html:not([data-mode]) .highlight .kc {
+    color: #5dd8ff !important;
+    font-weight: normal;
+  }
+}
+
 html[data-mode="dark"] .highlight .nc,
 html[data-mode="dark"] .highlight .kt,
 html[data-mode="dark"] .highlight .kc {
@@ -220,12 +271,31 @@ html[data-mode="dark"] .highlight .kc {
 }
 
 /* Functions */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .nf,
+  html:not([data-mode]) .highlight .fm {
+    color: #d0bf69 !important;
+  }
+}
+
 html[data-mode="dark"] .highlight .nf,
 html[data-mode="dark"] .highlight .fm {
   color: #d0bf69 !important;
 }
 
 /* Strings */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .s,
+  html:not([data-mode]) .highlight .s1,
+  html:not([data-mode]) .highlight .s2,
+  html:not([data-mode]) .highlight .sb,
+  html:not([data-mode]) .highlight .sc,
+  html:not([data-mode]) .highlight .sd,
+  html:not([data-mode]) .highlight .sh {
+    color: #fc6a5d !important;
+  }
+}
+
 html[data-mode="dark"] .highlight .s,
 html[data-mode="dark"] .highlight .s1,
 html[data-mode="dark"] .highlight .s2,
@@ -237,6 +307,16 @@ html[data-mode="dark"] .highlight .sh {
 }
 
 /* Numbers */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .m,
+  html:not([data-mode]) .highlight .mi,
+  html:not([data-mode]) .highlight .mf,
+  html:not([data-mode]) .highlight .mh,
+  html:not([data-mode]) .highlight .il {
+    color: #d0bf69 !important;
+  }
+}
+
 html[data-mode="dark"] .highlight .m,
 html[data-mode="dark"] .highlight .mi,
 html[data-mode="dark"] .highlight .mf,
@@ -246,6 +326,16 @@ html[data-mode="dark"] .highlight .il {
 }
 
 /* Comments */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .c,
+  html:not([data-mode]) .highlight .c1,
+  html:not([data-mode]) .highlight .cm,
+  html:not([data-mode]) .highlight .cp {
+    color: #6c7986 !important;
+    font-style: italic;
+  }
+}
+
 html[data-mode="dark"] .highlight .c,
 html[data-mode="dark"] .highlight .c1,
 html[data-mode="dark"] .highlight .cm,
@@ -255,18 +345,39 @@ html[data-mode="dark"] .highlight .cp {
 }
 
 /* Built-ins and Types */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .nb,
+  html:not([data-mode]) .highlight .bp {
+    color: #b281eb !important;
+  }
+}
+
 html[data-mode="dark"] .highlight .nb,
 html[data-mode="dark"] .highlight .bp {
   color: #b281eb !important;
 }
 
 /* Variables */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .n,
+  html:not([data-mode]) .highlight .nv {
+    color: #e0e0e0 !important;
+  }
+}
+
 html[data-mode="dark"] .highlight .n,
 html[data-mode="dark"] .highlight .nv {
   color: #e0e0e0 !important;
 }
 
 /* Operators */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) .highlight .o,
+  html:not([data-mode]) .highlight .ow {
+    color: #fc5fa3 !important;
+  }
+}
+
 html[data-mode="dark"] .highlight .o,
 html[data-mode="dark"] .highlight .ow {
   color: #fc5fa3 !important;

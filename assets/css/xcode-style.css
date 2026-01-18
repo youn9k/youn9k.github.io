@@ -1,0 +1,425 @@
+/*
+ * Xcode-inspired Code Block Styling
+ * Custom stylesheet for Jekyll Chirpy theme
+ * Supports both light and dark modes
+ */
+
+/* ============================================================================
+   1. BASE CONTAINER STYLES
+   ============================================================================ */
+
+div[class^="language-"],
+.highlight {
+  font-family: Menlo, Courier, monospace !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+/* ============================================================================
+   2. CODE HEADER - DARK MODE
+   ============================================================================ */
+
+html[data-mode="dark"] .code-header {
+  background-color: #373633 !important;
+  padding: 10px 14px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Traffic light dots for dark mode */
+html[data-mode="dark"] .code-header::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #f5655b;
+  box-shadow:
+    20px 0 0 #f6bd3b,
+    40px 0 0 #43c645;
+}
+
+/* ============================================================================
+   3. CODE HEADER - LIGHT MODE
+   ============================================================================ */
+
+html[data-mode="light"] .code-header,
+html:not([data-mode]) .code-header {
+  background-color: #e8e8e8 !important;
+  padding: 10px 14px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Traffic light dots for light mode */
+html[data-mode="light"] .code-header::before,
+html:not([data-mode]) .code-header::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #f5655b;
+  box-shadow:
+    20px 0 0 #f6bd3b,
+    40px 0 0 #43c645;
+}
+
+/* ============================================================================
+   4. CODE BODY - DARK MODE
+   ============================================================================ */
+
+html[data-mode="dark"] .highlight {
+  background-color: #292930 !important;
+}
+
+html[data-mode="dark"] div[class^="language-"] {
+  background-color: #292930 !important;
+}
+
+html[data-mode="dark"] .highlight pre {
+  background-color: #292930 !important;
+  margin: 0;
+  padding: 1rem;
+}
+
+html[data-mode="dark"] td.rouge-code {
+  background-color: #292930 !important;
+}
+
+/* ============================================================================
+   5. CODE BODY - LIGHT MODE
+   ============================================================================ */
+
+html[data-mode="light"] .highlight,
+html:not([data-mode]) .highlight {
+  background-color: #fafafa !important;
+}
+
+html[data-mode="light"] div[class^="language-"],
+html:not([data-mode]) div[class^="language-"] {
+  background-color: #fafafa !important;
+}
+
+html[data-mode="light"] .highlight pre,
+html:not([data-mode]) .highlight pre {
+  background-color: #fafafa !important;
+  margin: 0;
+  padding: 1rem;
+}
+
+html[data-mode="light"] td.rouge-code,
+html:not([data-mode]) td.rouge-code {
+  background-color: #fafafa !important;
+}
+
+/* ============================================================================
+   6. LINE NUMBERS - DARK MODE
+   ============================================================================ */
+
+html[data-mode="dark"] .highlight .lineno,
+html[data-mode="dark"] td.rouge-gutter {
+  color: #747a7a !important;
+  background-color: #292930 !important;
+}
+
+/* Line hover effect - dark mode */
+html[data-mode="dark"] .highlight table tr:hover {
+  background-color: #303239;
+}
+
+html[data-mode="dark"] .highlight table tr:hover .lineno {
+  color: #cfd2d1 !important;
+}
+
+/* ============================================================================
+   7. LINE NUMBERS - LIGHT MODE
+   ============================================================================ */
+
+html[data-mode="light"] .highlight .lineno,
+html[data-mode="light"] td.rouge-gutter,
+html:not([data-mode]) .highlight .lineno,
+html:not([data-mode]) td.rouge-gutter {
+  color: #9e9e9e !important;
+  background-color: #fafafa !important;
+}
+
+/* Line hover effect - light mode */
+html[data-mode="light"] .highlight table tr:hover,
+html:not([data-mode]) .highlight table tr:hover {
+  background-color: #f0f0f0;
+}
+
+html[data-mode="light"] .highlight table tr:hover .lineno,
+html:not([data-mode]) .highlight table tr:hover .lineno {
+  color: #5a5a5a !important;
+}
+
+/* ============================================================================
+   8. SCROLLBAR STYLING - DARK MODE
+   ============================================================================ */
+
+html[data-mode="dark"] .highlight pre::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html[data-mode="dark"] .highlight pre::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+html[data-mode="dark"] .highlight pre::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+html[data-mode="dark"] .highlight pre::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================================
+   9. SCROLLBAR STYLING - LIGHT MODE
+   ============================================================================ */
+
+html[data-mode="light"] .highlight pre::-webkit-scrollbar,
+html:not([data-mode]) .highlight pre::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html[data-mode="light"] .highlight pre::-webkit-scrollbar-thumb,
+html:not([data-mode]) .highlight pre::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+html[data-mode="light"] .highlight pre::-webkit-scrollbar-thumb:hover,
+html:not([data-mode]) .highlight pre::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-mode="light"] .highlight pre::-webkit-scrollbar-track,
+html:not([data-mode]) .highlight pre::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================================================
+   10. SYNTAX HIGHLIGHTING - DARK MODE (Xcode inspired)
+   ============================================================================ */
+
+/* Keywords */
+html[data-mode="dark"] .highlight .k,
+html[data-mode="dark"] .highlight .kd,
+html[data-mode="dark"] .highlight .kn,
+html[data-mode="dark"] .highlight .kp,
+html[data-mode="dark"] .highlight .kr,
+html[data-mode="dark"] .highlight .kv {
+  color: #ff79b2 !important;
+  font-weight: bold;
+}
+
+/* Types and Classes */
+html[data-mode="dark"] .highlight .nc,
+html[data-mode="dark"] .highlight .kt,
+html[data-mode="dark"] .highlight .kc {
+  color: #69dcfc !important;
+  font-weight: bold;
+}
+
+/* Functions */
+html[data-mode="dark"] .highlight .nf,
+html[data-mode="dark"] .highlight .fm {
+  color: #4fb0cb !important;
+}
+
+/* Strings */
+html[data-mode="dark"] .highlight .s,
+html[data-mode="dark"] .highlight .s1,
+html[data-mode="dark"] .highlight .s2,
+html[data-mode="dark"] .highlight .sb,
+html[data-mode="dark"] .highlight .sc,
+html[data-mode="dark"] .highlight .sd,
+html[data-mode="dark"] .highlight .sh {
+  color: #ff8170 !important;
+}
+
+/* Numbers */
+html[data-mode="dark"] .highlight .m,
+html[data-mode="dark"] .highlight .mi,
+html[data-mode="dark"] .highlight .mf,
+html[data-mode="dark"] .highlight .mh,
+html[data-mode="dark"] .highlight .il {
+  color: #d9c97c !important;
+}
+
+/* Comments */
+html[data-mode="dark"] .highlight .c,
+html[data-mode="dark"] .highlight .c1,
+html[data-mode="dark"] .highlight .cm,
+html[data-mode="dark"] .highlight .cp {
+  color: #7e8c98 !important;
+  font-style: italic;
+}
+
+/* Built-ins and Types */
+html[data-mode="dark"] .highlight .nb,
+html[data-mode="dark"] .highlight .bp {
+  color: #dabaff !important;
+}
+
+/* Variables */
+html[data-mode="dark"] .highlight .n,
+html[data-mode="dark"] .highlight .nv {
+  color: #cfd2d1 !important;
+}
+
+/* Operators */
+html[data-mode="dark"] .highlight .o,
+html[data-mode="dark"] .highlight .ow {
+  color: #ff79b2 !important;
+}
+
+/* ============================================================================
+   11. SYNTAX HIGHLIGHTING - LIGHT MODE (Xcode inspired)
+   ============================================================================ */
+
+/* Keywords */
+html[data-mode="light"] .highlight .k,
+html[data-mode="light"] .highlight .kd,
+html[data-mode="light"] .highlight .kn,
+html[data-mode="light"] .highlight .kp,
+html[data-mode="light"] .highlight .kr,
+html[data-mode="light"] .highlight .kv,
+html:not([data-mode]) .highlight .k,
+html:not([data-mode]) .highlight .kd,
+html:not([data-mode]) .highlight .kn,
+html:not([data-mode]) .highlight .kp,
+html:not([data-mode]) .highlight .kr,
+html:not([data-mode]) .highlight .kv {
+  color: #ad3da4 !important;
+  font-weight: bold;
+}
+
+/* Types and Classes */
+html[data-mode="light"] .highlight .nc,
+html[data-mode="light"] .highlight .kt,
+html[data-mode="light"] .highlight .kc,
+html:not([data-mode]) .highlight .nc,
+html:not([data-mode]) .highlight .kt,
+html:not([data-mode]) .highlight .kc {
+  color: #0f68a0 !important;
+  font-weight: bold;
+}
+
+/* Functions */
+html[data-mode="light"] .highlight .nf,
+html[data-mode="light"] .highlight .fm,
+html:not([data-mode]) .highlight .nf,
+html:not([data-mode]) .highlight .fm {
+  color: #326d74 !important;
+}
+
+/* Strings */
+html[data-mode="light"] .highlight .s,
+html[data-mode="light"] .highlight .s1,
+html[data-mode="light"] .highlight .s2,
+html[data-mode="light"] .highlight .sb,
+html[data-mode="light"] .highlight .sc,
+html[data-mode="light"] .highlight .sd,
+html[data-mode="light"] .highlight .sh,
+html:not([data-mode]) .highlight .s,
+html:not([data-mode]) .highlight .s1,
+html:not([data-mode]) .highlight .s2,
+html:not([data-mode]) .highlight .sb,
+html:not([data-mode]) .highlight .sc,
+html:not([data-mode]) .highlight .sd,
+html:not([data-mode]) .highlight .sh {
+  color: #d12f1b !important;
+}
+
+/* Numbers */
+html[data-mode="light"] .highlight .m,
+html[data-mode="light"] .highlight .mi,
+html[data-mode="light"] .highlight .mf,
+html[data-mode="light"] .highlight .mh,
+html[data-mode="light"] .highlight .il,
+html:not([data-mode]) .highlight .m,
+html:not([data-mode]) .highlight .mi,
+html:not([data-mode]) .highlight .mf,
+html:not([data-mode]) .highlight .mh,
+html:not([data-mode]) .highlight .il {
+  color: #272ad8 !important;
+}
+
+/* Comments */
+html[data-mode="light"] .highlight .c,
+html[data-mode="light"] .highlight .c1,
+html[data-mode="light"] .highlight .cm,
+html[data-mode="light"] .highlight .cp,
+html:not([data-mode]) .highlight .c,
+html:not([data-mode]) .highlight .c1,
+html:not([data-mode]) .highlight .cm,
+html:not([data-mode]) .highlight .cp {
+  color: #5d6c79 !important;
+  font-style: italic;
+}
+
+/* Built-ins and Types */
+html[data-mode="light"] .highlight .nb,
+html[data-mode="light"] .highlight .bp,
+html:not([data-mode]) .highlight .nb,
+html:not([data-mode]) .highlight .bp {
+  color: #4b21b0 !important;
+}
+
+/* Variables */
+html[data-mode="light"] .highlight .n,
+html[data-mode="light"] .highlight .nv,
+html:not([data-mode]) .highlight .n,
+html:not([data-mode]) .highlight .nv {
+  color: #272727 !important;
+}
+
+/* Operators */
+html[data-mode="light"] .highlight .o,
+html[data-mode="light"] .highlight .ow,
+html:not([data-mode]) .highlight .o,
+html:not([data-mode]) .highlight .ow {
+  color: #ad3da4 !important;
+}
+
+/* ============================================================================
+   12. MAX HEIGHT AND OVERFLOW
+   ============================================================================ */
+
+.highlight pre,
+div[class^="language-"] pre {
+  max-height: 600px;
+  overflow: auto;
+}
+
+/* ============================================================================
+   13. RESPONSIVE ADJUSTMENTS
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .code-header::before {
+    width: 10px;
+    height: 10px;
+    box-shadow:
+      16px 0 0 #f6bd3b,
+      32px 0 0 #43c645;
+  }
+
+  .highlight pre,
+  div[class^="language-"] pre {
+    max-height: 400px;
+  }
+}

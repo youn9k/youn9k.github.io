@@ -21,7 +21,7 @@ div[class^="language-"],
    ============================================================================ */
 
 html[data-mode="dark"] .code-header {
-  background-color: #373633 !important;
+  background-color: #2d2d2d !important;
   padding: 10px 14px !important;
   display: flex;
   align-items: center;
@@ -75,21 +75,21 @@ html[data-mode="light"] .code-header::before {
    ============================================================================ */
 
 html[data-mode="dark"] .highlight {
-  background-color: #292930 !important;
+  background-color: #1e1e1e !important;
 }
 
 html[data-mode="dark"] div[class^="language-"] {
-  background-color: #292930 !important;
+  background-color: #1e1e1e !important;
 }
 
 html[data-mode="dark"] .highlight pre {
-  background-color: #292930 !important;
+  background-color: #1e1e1e !important;
   margin: 0;
   padding: 1rem;
 }
 
 html[data-mode="dark"] td.rouge-code {
-  background-color: #292930 !important;
+  background-color: #1e1e1e !important;
 }
 
 /* ============================================================================
@@ -120,13 +120,13 @@ html[data-mode="light"] td.rouge-code {
 
 html[data-mode="dark"] .highlight .lineno,
 html[data-mode="dark"] td.rouge-gutter {
-  color: #747a7a !important;
-  background-color: #292930 !important;
+  color: #6e7681 !important;
+  background-color: #1e1e1e !important;
 }
 
 /* Line hover effect - dark mode */
 html[data-mode="dark"] .highlight table tr:hover {
-  background-color: #303239;
+  background-color: #2a2a2a;
 }
 
 html[data-mode="dark"] .highlight table tr:hover .lineno {
@@ -207,7 +207,7 @@ html[data-mode="dark"] .highlight .kn,
 html[data-mode="dark"] .highlight .kp,
 html[data-mode="dark"] .highlight .kr,
 html[data-mode="dark"] .highlight .kv {
-  color: #ff79b2 !important;
+  color: #fc5fa3 !important;
   font-weight: bold;
 }
 
@@ -215,14 +215,14 @@ html[data-mode="dark"] .highlight .kv {
 html[data-mode="dark"] .highlight .nc,
 html[data-mode="dark"] .highlight .kt,
 html[data-mode="dark"] .highlight .kc {
-  color: #69dcfc !important;
-  font-weight: bold;
+  color: #5dd8ff !important;
+  font-weight: normal;
 }
 
 /* Functions */
 html[data-mode="dark"] .highlight .nf,
 html[data-mode="dark"] .highlight .fm {
-  color: #4fb0cb !important;
+  color: #d0bf69 !important;
 }
 
 /* Strings */
@@ -233,7 +233,7 @@ html[data-mode="dark"] .highlight .sb,
 html[data-mode="dark"] .highlight .sc,
 html[data-mode="dark"] .highlight .sd,
 html[data-mode="dark"] .highlight .sh {
-  color: #ff8170 !important;
+  color: #fc6a5d !important;
 }
 
 /* Numbers */
@@ -242,7 +242,7 @@ html[data-mode="dark"] .highlight .mi,
 html[data-mode="dark"] .highlight .mf,
 html[data-mode="dark"] .highlight .mh,
 html[data-mode="dark"] .highlight .il {
-  color: #d9c97c !important;
+  color: #d0bf69 !important;
 }
 
 /* Comments */
@@ -250,26 +250,26 @@ html[data-mode="dark"] .highlight .c,
 html[data-mode="dark"] .highlight .c1,
 html[data-mode="dark"] .highlight .cm,
 html[data-mode="dark"] .highlight .cp {
-  color: #7e8c98 !important;
+  color: #6c7986 !important;
   font-style: italic;
 }
 
 /* Built-ins and Types */
 html[data-mode="dark"] .highlight .nb,
 html[data-mode="dark"] .highlight .bp {
-  color: #dabaff !important;
+  color: #b281eb !important;
 }
 
 /* Variables */
 html[data-mode="dark"] .highlight .n,
 html[data-mode="dark"] .highlight .nv {
-  color: #cfd2d1 !important;
+  color: #e0e0e0 !important;
 }
 
 /* Operators */
 html[data-mode="dark"] .highlight .o,
 html[data-mode="dark"] .highlight .ow {
-  color: #ff79b2 !important;
+  color: #fc5fa3 !important;
 }
 
 /* ============================================================================

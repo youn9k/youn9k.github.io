@@ -8,6 +8,7 @@
    1. BASE CONTAINER STYLES
    ============================================================================ */
 
+   /*
 div[class^="language-"],
 .highlight {
   font-family: Menlo, Courier, monospace !important;
@@ -15,6 +16,7 @@ div[class^="language-"],
   border-radius: 10px !important;
   overflow: hidden;
 }
+  */
 
 /* ============================================================================
    2. CODE HEADER - DARK MODE
@@ -59,7 +61,7 @@ html[data-mode="dark"] .code-header::before {
 
 @media (prefers-color-scheme: light) {
   html:not([data-mode]) .code-header {
-    background-color: #e8e8e8 !important;
+    background-color: #F6F8FA !important;
     padding: 10px 14px !important;
     display: flex;
     align-items: center;
@@ -68,7 +70,7 @@ html[data-mode="dark"] .code-header::before {
 }
 
 html[data-mode="light"] .code-header {
-  background-color: #e8e8e8 !important;
+  background-color: #F6F8FA !important;
   padding: 10px 14px !important;
   display: flex;
   align-items: center;
@@ -138,40 +140,40 @@ html[data-mode="dark"] td.rouge-code {
 
 @media (prefers-color-scheme: light) {
   html:not([data-mode]) .highlight {
-    background-color: #fafafa !important;
+    background-color: #F6F8FA !important;
   }
 
   html:not([data-mode]) div[class^="language-"] {
-    background-color: #fafafa !important;
+    background-color: #F6F8FA !important;
   }
 
   html:not([data-mode]) .highlight pre {
-    background-color: #fafafa !important;
+    background-color: #F6F8FA !important;
     margin: 0;
     padding: 1rem;
   }
 
   html:not([data-mode]) td.rouge-code {
-    background-color: #fafafa !important;
+    background-color: #F6F8FA !important;
   }
 }
 
 html[data-mode="light"] .highlight {
-  background-color: #fafafa !important;
+  background-color: #F6F8FA !important;
 }
 
 html[data-mode="light"] div[class^="language-"] {
-  background-color: #fafafa !important;
+  background-color: #F6F8FA !important;
 }
 
 html[data-mode="light"] .highlight pre {
-  background-color: #fafafa !important;
+  background-color: #F6F8FA !important;
   margin: 0;
   padding: 1rem;
 }
 
 html[data-mode="light"] td.rouge-code {
-  background-color: #fafafa !important;
+  background-color: #F6F8FA !important;
 }
 
 /* ============================================================================
@@ -461,13 +463,13 @@ html[data-mode="light"] .highlight .kc {
 @media (prefers-color-scheme: light) {
   html:not([data-mode]) .highlight .nf,
   html:not([data-mode]) .highlight .fm {
-    color: #326d74 !important;
+    color: #027DB0 !important;
   }
 }
 
 html[data-mode="light"] .highlight .nf,
 html[data-mode="light"] .highlight .fm {
-  color: #326d74 !important;
+  color: #027DB0 !important;
 }
 
 /* Strings */

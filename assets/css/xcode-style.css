@@ -563,13 +563,13 @@ html[data-mode="light"] .highlight .nv {
 @media (prefers-color-scheme: light) {
   html:not([data-mode]) .highlight .o,
   html:not([data-mode]) .highlight .ow {
-    color: #e0e0e0 !important;
+    color: #272727 !important;
   }
 }
 
 html[data-mode="light"] .highlight .o,
 html[data-mode="light"] .highlight .ow {
-  color: #e0e0e0 !important;
+  color: #272727 !important;
 }
 
 /* ============================================================================

@@ -28,3 +28,6 @@ assets/js/dist
 
 # Obsidian
 .obsidian
+
+# Claude Code local settings
+.claude/settings.local.json
